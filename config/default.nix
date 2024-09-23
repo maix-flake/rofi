@@ -168,7 +168,7 @@ with lib; let
       in
         pkgs.writeShellScriptBin "rofi-${name}" ''
           export PATH="${concatStringsSep ":" (map (p: "${p}/bin/") (attrValues packages))}:$PATH"
-          XDG_CONFIG_HOME=${themes}/share/rofi/ ${computedTheme} ${scriptPath}
+          ${computedTheme} ${scriptPath}
         ''
     );
     built =
