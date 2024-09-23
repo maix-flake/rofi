@@ -24,6 +24,7 @@ with lib; let
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.sh' -print) \
        --replace-quiet "\''${polkit_cmd} alacritty -e" '${getExe config.rofi.terminalPackage} ''${polkit_cmd}' \
        --replace-quiet "theme='style-1'" ""                                                                    \
+       --replace-quiet "rofi \\" "${getExe config.rofi.package} \\"                                            \
        --replace-quiet '"$HOME"/.config/rofi/' '@out@/share/rofi/'                                             \
        --replace-quiet '$HOME/.config/rofi/' '@out@/share/rofi/'                                               \
        --replace-quiet '`hostname`' '`${pkgs.busybox}/bin/hostname`'                                           \
