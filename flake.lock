@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1726952250,
-        "narHash": "sha256-LHRHS26bxkD+Ao5oxJ3SIFItMLwFeJmRbbYpeIj1GSI=",
+        "lastModified": 1728996752,
+        "narHash": "sha256-mye1WTx3HipUtuvuQLJKewvKIRgtGSfSM4eA0IwZMOA=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4e030907e6c43bf232eb27b82e79290f969e009f",
+        "rev": "4bb7fb553d62e26b7006be339d38f4f1dd65ea0b",
         "type": "github"
       },
       "original": {
@@ -36,11 +36,11 @@
     "rofi-themes": {
       "flake": false,
       "locked": {
-        "lastModified": 1725894235,
-        "narHash": "sha256-slq48vZlVLmFn4K+ET0uZeFQJYr7+lGxAzvvPHXj/NU=",
+        "lastModified": 1728572631,
+        "narHash": "sha256-xlcI9K6cXJetaphkMW5mVWDshqcXeTtxAAwtOK5fF6s=",
         "owner": "adi1090x",
         "repo": "rofi",
-        "rev": "3f2275ab8f9dbb697c7387a20a78a3da196c302a",
+        "rev": "f3835e7f728bf6d94fb3c2c683c6754e6ccd202e",
         "type": "github"
       },
       "original": {
