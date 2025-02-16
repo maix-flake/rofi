@@ -20,6 +20,14 @@ with lib; let
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet 'launchers' 'launcher'
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet '~/.config/rofi/' '@out@/share/rofi/'
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet '$HOME/.config/rofi/' '@out@/share/rofi/'
+      ${pkgs.findutils}/bin/find . -type l | while read symlink; do
+        target=$(readlink "$symlink");
+        new_target="''${target//launchers/launcher}";
+        if [[ "$target" != "$new_target" ]]; then
+          ln -sfn "$new_target" "$symlink";
+          echo "Updated: $symlink -> $new_target";
+        fi
+      done
 
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.sh' -print) \
        --replace-quiet "\''${polkit_cmd} alacritty -e" '${getExe config.rofi.terminalPackage} ''${polkit_cmd}' \
