@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
     rofi-themes = {
-      url = "github:adi1090x/rofi?subdir=files";
+      url = "github:adi1090x/rofi?dir=files";
       flake = false;
     };
   };

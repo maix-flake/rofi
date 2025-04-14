@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1742226784,
-        "narHash": "sha256-JihbF3gCggOPo60orCo2EZZALwqvidFYxGxl/qCVGEM=",
+        "lastModified": 1744632434,
+        "narHash": "sha256-s4H8cFLNMs5ohRC46kS6DIptarUttiNbpGBG5R9/IBk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "29b8c9dcfbd58ae258b7a6ea0a61b62e0d13fc23",
+        "rev": "fb777966eb979e6798888d740f8e856dd5c2b312",
         "type": "github"
       },
       "original": {
@@ -36,14 +36,16 @@
     "rofi-themes": {
       "flake": false,
       "locked": {
-        "lastModified": 1740755062,
-        "narHash": "sha256-wwLcb7z5jCKgKPY5mNhYIoPvKbVO3PwULrJ+Lm3Ra7g=",
+        "dir": "files",
+        "lastModified": 1744297494,
+        "narHash": "sha256-lJMOTyeZ+2DjytddgKhmpYB/0XP6Z9ajE9G66TV+csg=",
         "owner": "adi1090x",
         "repo": "rofi",
-        "rev": "9d27f13bc7aabeaf755a32fcc640713256f7433e",
+        "rev": "fa801db50aaf40aa136f5e50b78ee8743a6f5a53",
         "type": "github"
       },
       "original": {
+        "dir": "files",
         "owner": "adi1090x",
         "repo": "rofi",
         "type": "github"
