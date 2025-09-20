@@ -11,12 +11,13 @@ with lib; let
     name = "rofi-themes";
     src = inputs.rofi-themes;
     buildPhase = ''
-      patch files/powermenu/type-1/powermenu.sh <${../powermenu.patch}
-      patch files/powermenu/type-2/powermenu.sh <${../powermenu.patch}
-      patch files/powermenu/type-3/powermenu.sh <${../powermenu.patch}
-      patch files/powermenu/type-4/powermenu.sh <${../powermenu.patch}
-      patch files/powermenu/type-5/powermenu.sh <${../powermenu.patch}
-      patch files/powermenu/type-6/powermenu.sh <${../powermenu.patch}
+      ls -la .
+      patch powermenu/type-1/powermenu.sh <${../powermenu.patch}
+      patch powermenu/type-2/powermenu.sh <${../powermenu.patch}
+      patch powermenu/type-3/powermenu.sh <${../powermenu.patch}
+      patch powermenu/type-4/powermenu.sh <${../powermenu.patch}
+      patch powermenu/type-5/powermenu.sh <${../powermenu.patch}
+      patch powermenu/type-6/powermenu.sh <${../powermenu.patch}
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet 'launchers' 'launcher'
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet '~/.config/rofi/' '@out@/share/rofi/'
       substituteInPlace $(${pkgs.findutils}/bin/find . -name '*.rasi' -print) --replace-quiet '$HOME/.config/rofi/' '@out@/share/rofi/'
@@ -58,7 +59,7 @@ with lib; let
     '';
     installPhase = ''
       mkdir -p $out/share/
-      cp -r ./files/ $out/share/rofi
+      cp -r . $out/share/rofi
       substituteInPlace $(${pkgs.findutils}/bin/find $out -name '*.rasi' -print) --subst-var out
       substituteInPlace $(${pkgs.findutils}/bin/find $out -name '*.sh' -print) --subst-var out
       mv $out/share/rofi/launchers $out/share/rofi/launcher
